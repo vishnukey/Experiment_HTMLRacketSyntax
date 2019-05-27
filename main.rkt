@@ -33,6 +33,7 @@ body {
   border-style: solid;
   margin-bottom: 3%;
   padding-left: 1%;
+  padding-right: 1%;
   padding-bottom: 1%;
 }
 ")
@@ -76,8 +77,15 @@ body {
 ; Some actual data to work off of
 (define blog-posts
   (list
-   (post "First Post" '("Just some text"))
-   (post "Second Post" '((p "A proper paragraph " (em "this") " time!")))))
+   (post "Third Post"
+         '((p "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nibh enim. Fusce sit amet purus quis felis dapibus ultricies. Sed eget dui egestas, tempus ex sagittis, dapibus justo. Aliquam sollicitudin nulla id nisi euismod, vel bibendum turpis ultrices. Aliquam erat volutpat. Mauris imperdiet consequat augue eget mollis. Proin quis massa nisl. Duis sagittis ante non metus sagittis, at semper sapien pellentesque. Sed tempor efficitur magna quis rutrum. Duis a elit vitae magna tincidunt consectetur nec vitae tellus. Sed fringilla volutpat elit, ut facilisis ante tincidunt sit amet. Vestibulum ultrices orci vitae justo molestie, eu dignissim sem semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget nunc a velit gravida tristique. Sed elementum vulputate quam ac mattis. Maecenas imperdiet ipsum non dui porta aliquet.")
+           (p "Nulla imperdiet sollicitudin vehicula. Sed et neque sodales, accumsan nibh ut, vestibulum dolor. Nullam non erat quis nisl tristique semper. Ut ac sem ex. Praesent dignissim neque et rutrum euismod. Vivamus commodo metus vulputate nisl rhoncus, at mattis quam sagittis. Mauris semper metus in vulputate molestie. Donec maximus vel nibh quis euismod. Pellentesque neque diam, lobortis fermentum quam quis, tempus bibendum neque. In non sem efficitur, pretium libero non, finibus eros. Vestibulum eu sagittis purus. Donec suscipit et quam eu semper. Vestibulum eu bibendum dolor. Praesent quis vulputate neque, a tincidunt augue.")
+           (p "Proin sit amet orci ut lectus pharetra ultricies. In sed orci sit amet eros blandit laoreet. Nullam eleifend ac lectus non bibendum. Nulla facilisi. Donec in dui hendrerit, fermentum justo id, auctor augue. Proin eu est ut elit ultrices iaculis vitae feugiat massa. Curabitur eget enim rhoncus ante scelerisque finibus ac quis sapien. Praesent ac vehicula leo, ut ullamcorper tortor. Proin vel nulla quis velit faucibus tincidunt vel id odio. Pellentesque at justo a dui aliquam cursus. Integer ut elit sit amet leo accumsan varius. Phasellus feugiat nulla suscipit sapien condimentum interdum. Ut nec lorem vitae dolor cursus convallis. Vivamus mi tellus, pharetra a libero a, rhoncus consequat orci. Nullam et accumsan eros, id aliquet nisl. Nulla consectetur iaculis mauris, a tincidunt dui gravida eu.")
+           (p "Maecenas at nisi et nunc pellentesque vulputate. Donec quis ex tincidunt massa malesuada sollicitudin. Pellentesque orci orci, vehicula vitae odio iaculis, finibus eleifend arcu. Nam hendrerit, mi at aliquet iaculis, enim lorem malesuada mauris, quis rutrum ex massa nec arcu. Sed non diam tortor. Proin scelerisque purus eget felis laoreet viverra. Aenean id lacus ornare, efficitur ante a, tempus ligula. Pellentesque gravida turpis posuere arcu placerat, id facilisis erat scelerisque. Praesent ultricies turpis at leo auctor sagittis.")
+           (p "Mauris ac pellentesque augue. Donec condimentum ut ex nec tempus. Etiam ac odio lobortis, hendrerit ipsum at, eleifend odio. Praesent facilisis commodo metus a rhoncus. Donec sit amet vulputate arcu, in imperdiet purus. Aenean eget tellus sodales, bibendum velit in, faucibus tellus. Maecenas viverra, enim ut sodales feugiat, tortor ante pellentesque turpis, et mollis nulla tortor vitae ipsum. Etiam vel mollis dui, vitae facilisis orci. Sed rutrum nulla et tempus ullamcorper. In volutpat ut erat posuere aliquam. Etiam vestibulum, enim vel pretium aliquet, leo augue consequat arcu, a cursus mi dui in erat. Suspendisse et auctor odio. Integer convallis, mi sit amet dignissim accumsan, augue massa tempus urna, vitae aliquam nisi justo ac tortor. Nam laoreet nulla iaculis ex elementum gravida.")
+           (span [(style "color:red")] (p "Now that's a lot of " (strong "text")))))
+   (post "Second Post" '((p "A proper paragraph " (em "this") " time!")))
+   (post "First Post" '("Just some text"))))
 
 ; The landing page
 (define index (default-with-body
